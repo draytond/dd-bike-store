@@ -3,19 +3,28 @@
 /* jasmine specs for controllers go here */
 
 describe('BikesOverviewCtrl', function() {
+	var scope, ctrl, $httpBackend;
+
 	beforeEach(module('bikeStoreApp'));
 
-    it("should put 5 bikes on the scope", inject(function($controller) {
-		var scope = {};
-		var ctrl = $controller('BikesOverviewCtrl', {$scope: scope});
+	beforeEach(inject(function(_$httpBackend_, $rootScope, $controller) {
+		$httpBackend = _$httpBackend_; // to avoid name conflict
+		$httpBackend.expectGET('bikes/allbikes.json')
+			.respond([{name: 'myBike'}]);
 
-		expect(scope.bikes.length).toBe(5);
-  	}));
+		scope = $rootScope.$new();
+		ctrl = $controller('BikesOverviewCtrl', {$scope: scope});
+	}));
+
+  	it("should make the bikes model with just 1 bike fetched via $http", function() {
+		expect(scope.bikes).toBeUndefined();
+
+		$httpBackend.flush();
+
+		expect(scope.bikes).toEqual([{name: 'myBike'}]);
+  	});
 
   	it("should set the default filter to be by Name", inject(function($controller) {
-		var scope = {};
-		var ctrl = $controller('BikesOverviewCtrl', {$scope: scope});
-
 		expect(scope.order).toBe('name');
   	}));
 });
