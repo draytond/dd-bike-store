@@ -81,7 +81,7 @@ bikeStoreApp.controller("BikesOverviewCtrl", function($scope){
 		        "sizeAndWeight":{
 		            "dimensions":[
 		                "11 inches (w)",
-		                "18 inches (h)",
+		                "16 inches (h)",
 		                "40 inches (d)"
 		            ],
 		            "weight":"6lb"
@@ -142,6 +142,4 @@ bikeStoreApp.controller("BikesOverviewCtrl", function($scope){
 		        }
 		    }
 		];
-
-		$scope.order = 'name';
 });

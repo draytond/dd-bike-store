@@ -12,10 +12,4 @@ describe('BikesOverviewCtrl', function() {
 		expect(scope.bikes.length).toBe(5);
   	}));
 
-  	it("should set the default filter to be by Name", inject(function($controller) {
-		var scope = {};
-		var ctrl = $controller('BikesOverviewCtrl', {$scope: scope});
-
-		expect(scope.order).toBe('name');
-  	}));
 });

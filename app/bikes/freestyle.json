@@ -1,28 +1,28 @@
 {
-    "additionalFeatures":"Stylish spokes",
-    "availability":[
+    "additionalFeatures": "Stylish spokes", 
+    "availability": [
         "Everywhere"
-    ],
-    "description":"Reprehenderit pancetta meatball kevin ex bacon landjaeger. Jowl frankfurter consequat ut. Culpa pancetta ipsum tenderloin pig. Kevin velit flank ut. Frankfurter lorem turducken short loin chicken occaecat dolore ut jerky kielbasa. Fugiat jerky ex, ribeye pastrami velit eu bacon doner in proident aliqua tongue beef ribs.",
-    "frame":{
-        "type":"W-Frame",
-        "material":"aluminum",
-        "weight":"7lb"
-    },
-    "id":"freestyle",
-    "images":[
+    ], 
+    "description": "Reprehenderit pancetta meatball kevin ex bacon landjaeger. Jowl frankfurter consequat ut. Culpa pancetta ipsum tenderloin pig. Kevin velit flank ut. Frankfurter lorem turducken short loin chicken occaecat dolore ut jerky kielbasa. Fugiat jerky ex, ribeye pastrami velit eu bacon doner in proident aliqua tongue beef ribs.", 
+    "frame": {
+        "type": "W-Frame", 
+        "material": "aluminum", 
+        "weight": "7lb"
+    }, 
+    "id": "freestyle", 
+    "images": [
         "img/bikes/freestyle-1.jpg",
         "img/bikes/freestyle-2.jpg",
         "img/bikes/freestyle-3.jpg",
         "img/bikes/freestyle-4.jpg"
-    ],
-    "name":"Freestyle Stunt Bike",
-    "sizeAndWeight":{
-        "dimensions":[
-            "11 inches (w)",
-            "18 inches (h)",
+    ], 
+    "name": "Freestyle Stunt Bike", 
+    "sizeAndWeight": {
+        "dimensions": [
+            "11 inches (w)", 
+            "16 inches (h)", 
             "40 inches (d)"
-        ],
-        "weight":"6lb"
+        ], 
+        "weight": "6lb"
     }
 }
