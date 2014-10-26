@@ -1,0 +1,26 @@
+{
+    "additionalFeatures": "None", 
+    "availability": [
+        "Dumpster"
+    ], 
+    "description": "Bacon ipsum dolor amet laboris drumstick sed jerky anim tongue voluptate in sirloin ground round nisi short loin culpa tail leberkas. Pig cillum consequat minim, ham ullamco brisket in eiusmod. Cillum shank id, spare ribs enim rump short ribs mollit dolore dolor commodo leberkas. Meatball qui rump in. Sint ham hock sed strip steak bresaola, do officia salami consectetur spare ribs.", 
+    "frame": {
+        "type": "Z-Frame", 
+        "material": "steel", 
+        "weight": "14lb"
+    }, 
+    "id": "bestwick", 
+    "images": [
+        "img/bikes/bestwick-1.jpg",
+        "img/bikes/bestwick-2.jpg"
+    ], 
+    "name": "Super Lame Bestwick Bike", 
+    "sizeAndWeight": {
+        "dimensions": [
+            "12 inches (w)", 
+            "19 inches (h)", 
+            "40 inches (d)"
+        ], 
+        "weight": "16lb"
+    }
+}

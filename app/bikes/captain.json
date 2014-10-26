@@ -1,0 +1,27 @@
+{
+    "additionalFeatures": "Shield of protection", 
+    "availability": [
+        "Only in America"
+    ], 
+    "description": "Duis consequat ad aliqua adipisicing ex. Occaecat labore ball tip culpa, biltong excepteur dolore fatback ad pork loin. Proident est cillum in kevin. Turkey incididunt kevin, tail hamburger ribeye porchetta pig filet mignon irure reprehenderit ham hock. Brisket tenderloin ad boudin porchetta in jerky lorem, ham hock ut aliquip ut voluptate nulla.", 
+    "frame": {
+        "type": "C-Frame", 
+        "material": "titanium", 
+        "weight": "6lb"
+    }, 
+    "id": "capt", 
+    "images": [
+        "img/bikes/capt-1.jpg",
+        "img/bikes/capt-2.jpg",
+        "img/bikes/capt-3.jpg"
+    ], 
+    "name": "Captain America Kick Butt Bike", 
+    "sizeAndWeight": {
+        "dimensions": [
+            "14 inches (w)", 
+            "13 inches (h)", 
+            "44 inches (d)"
+        ], 
+        "weight": "10lb"
+    }
+}
