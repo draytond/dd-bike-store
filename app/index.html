@@ -5,20 +5,31 @@
   <title>My HTML File</title>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="css/app.css">
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="js/controllers.js"></script>
 </head>
 <body ng-controller="BikesOverviewCtrl">
-	<input type="text" ng-model="bikeFilter">
-	<select ng-model="order">
-		<option value="name">Name</option>
-		<option value="sizeAndWeight.dimensions[1]">Height</option>
-	</select>
-  <ul>
-  	<li ng-repeat="bike in bikes | filter:bikeFilter | orderBy:order">
-  		<p>{{bike.name}}</p>
-  	</li>
-  </ul>
-
+	<div class="col-sm-2">
+		<input type="text" ng-model="bikeFilter">
+		<label for="order-me">Order By: </label>
+		<select id="order-me" ng-model="order">
+			<option value="name">Name</option>
+			<option value="sizeAndWeight.dimensions[1]">Height</option>
+		</select>
+	</div>
+	<div class="col-sm-10">
+	    <ul>
+		  	<li class="media" ng-repeat="bike in bikes | filter:bikeFilter | orderBy:order">
+		  		<a class="pull-left" href="#/bikes/{{bike.id}}">
+					<img class="media-object" ng-src="{{bike.images[0]}}" 
+						alt="Click for more info on {{bike.name}}" />
+				</a>
+				<div class="media-body">
+					<h4 class="media-heading"><a href="#/bikes/{{bike.id}}">{{bike.name}}</a></h4>
+					<p>{{bike.description}}</p>
+				</div>
+		  	</li>
+	    </ul>
+    </div>
+	<script src="bower_components/angular/angular.js"></script>
+  	<script src="js/controllers.js"></script>
 </body>
 </html>

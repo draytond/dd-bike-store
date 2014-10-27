@@ -24,7 +24,7 @@ describe('BikesOverviewCtrl', function() {
 		expect(scope.bikes).toEqual([{name: 'myBike'}]);
   	});
 
-  	it("should set the default filter to be by Name", inject(function($controller) {
+  	it("should set the default filter to be by Name", function() {
 		expect(scope.order).toBe('name');
-  	}));
+  	});
 });

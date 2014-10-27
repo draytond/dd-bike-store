@@ -51,5 +51,14 @@ describe('bikeStoreApp', function() {
 				'Freestyle Stunt Bike' 
 			]);
 		});
+
+		it('should render bike-specific links', function() {
+			var search = element(by.model('bikeFilter'));
+			search.sendKeys('machine');
+			element.all(by.css('li a')).first().click();
+			browser.getLocationAbsUrl().then(function(url) {
+				expect(url.split('#')[1]).toBe('/bikes/machine');
+			});
+		});
 	});
 });

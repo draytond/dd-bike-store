@@ -1,1 +1,6 @@
 /* app css stylesheet */
+
+.media .media-object {
+	height: 100px;
+	width: 130px;
+}
