@@ -1,0 +1,22 @@
+<div class="col-sm-2">
+ <input type="text" ng-model="bikeFilter">
+ <label for="order-me">Order By: </label>
+ <select id="order-me" ng-model="order">
+   <option value="name">Name</option>
+   <option value="sizeAndWeight.dimensions[1]">Height</option>
+ </select>
+</div>
+<div class="col-sm-10">
+  <ul>
+    <li class="media" ng-repeat="bike in bikes | filter:bikeFilter | orderBy:order">
+      <a class="pull-left" href="#/details/{{bike.id}}">
+      <img class="media-object" ng-src="{{bike.images[0]}}"
+        alt="Click for more info on {{bike.name}}" />
+    </a>
+    <div class="media-body">
+      <h4 class="media-heading"><a href="#/details/{{bike.id}}">{{bike.name}}</a></h4>
+      <p>{{bike.description}}</p>
+    </div>
+    </li>
+  </ul>
+</div>
