@@ -1,12 +1,18 @@
 'use strict';
 
 /* Controllers */
-var bikeStoreApp = angular.module("bikeStoreApp", []);
+var bikeStoreControllers = angular.module("bikeStoreControllers", []);
 
-bikeStoreApp.controller("BikesOverviewCtrl", ["$scope", "$http", function($scope, $http){
-	$http.get('bikes/allbikes.json').success(function(data) {
-		$scope.bikes = data;
-	});
+bikeStoreControllers.controller("BikesOverviewCtrl", ["$scope", "$http", 
+	function($scope, $http){
+		$http.get('bikes/allbikes.json').success(function(data) {
+			$scope.bikes = data;
+		});
 
 	$scope.order = 'name';
+}]);
+
+bikeStoreControllers.controller("bikeDetailCtrl", ["$scope", "$routeParams", 
+	function($scope, $routeParams) {
+		$scope.currentId = $routeParams.id;
 }]);

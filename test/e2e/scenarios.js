@@ -3,11 +3,17 @@
 /* http://docs.angularjs.org/guide/dev_guide.e2e-testing */
 
 describe('bikeStoreApp', function() {
+	it('should redirect index.html to index.html#/bikes', function() {
+		browser.get('app/index.html');
+		browser.getLocationAbsUrl().then(function(url) {
+			expect(url.split('#')[1]).toBe('/bikes');
+		});
+	});
 
 	describe('overview of all bikes', function() {
-		beforeEach(function() {
-	    	browser.get('app/index.html');
-	  	});
+	  	beforeEach(function() {
+			browser.get('app/index.html#/bikes');
+		});
 
 		it('should filter the list of bikes based on the search field input', function() {
 			var bikeList = element.all(by.repeater('bike in bikes'));
@@ -57,7 +63,17 @@ describe('bikeStoreApp', function() {
 			search.sendKeys('machine');
 			element.all(by.css('li a')).first().click();
 			browser.getLocationAbsUrl().then(function(url) {
-				expect(url.split('#')[1]).toBe('/bikes/machine');
+				expect(url.split('#')[1]).toBe('/details/machine');
+			});
+		});
+
+		describe('Bike detail view', function() {
+			beforeEach(function() {
+				browser.get('app/index.html#/details/machine');
+			});
+
+			it('should display placeholder page with the id of the bike', function() {
+				expect(element(by.binding('currentId')).getText()).toBe('machine');
 			});
 		});
 	});
