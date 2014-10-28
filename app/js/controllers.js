@@ -3,22 +3,19 @@
 /* Controllers */
 var bikeStoreControllers = angular.module("bikeStoreControllers", []);
 
-bikeStoreControllers.controller("BikesOverviewCtrl", ["$scope", "$http",
-	function($scope, $http){
-		$http.get('bikes/allbikes.json').success(function(data) {
-			$scope.bikes = data;
-		});
-
-	$scope.order = 'name';
+bikeStoreControllers.controller("BikesOverviewCtrl", ["$scope", "$http", "Bike"
+	function($scope, $http, Bike) {
+	 $scope.bikes = Bike.query();
+	 $scope.order = 'name';
+  }
 }]);
 
-bikeStoreControllers.controller("bikeDetailCtrl", ["$scope", "$routeParams", "$http",
-	function($scope, $routeParams, $http) {
-    $http.get('bikes/' + $routeParams.id + '.json').success(function(data) {
-      $scope.bike = data;
+bikeStoreControllers.controller("bikeDetailCtrl", ["$scope", "$routeParams", "Bike",
+	function($scope, $routeParams, Bike) {
+    $scope.bike = Phone.get(.get({id: $routeParams.id), function(bike){
       $scope.currentBikePic = $scope.bike.images[0];
     });
-		$scope.currentId = $routeParams.id;
+
     $scope.bigPic = function(img) {
       $scope.currentBikePic = img;
     }
