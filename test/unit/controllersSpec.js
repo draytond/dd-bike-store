@@ -1,30 +1,50 @@
 'use strict';
 
 /* jasmine specs for controllers go here */
+describe('Bike Store controllers', function() {
 
-describe('BikesOverviewCtrl', function() {
-	var scope, ctrl, $httpBackend;
+  beforeEach(module('bikeStoreApp'));
 
-	beforeEach(module('bikeStoreApp'));
+  describe('bikeDetailCtrl', function() {
+    var scope, ctrl, $httpBackend;
+    beforeEach(inject(function(_$httpBackend_, $rootScope, $routeParams, $controller){
+      $httpBackend = _$httpBackend_;
+      $httpBackend.expectGET('bikes/zzz.json').respond({name: 'best bike'});
+      $routeParams.id = 'zzz';
+      scope = $rootScope.$new();
+      ctrl = $controller('bikeDetailCtrl', {$scope: scope});
+    }));
 
-	beforeEach(inject(function(_$httpBackend_, $rootScope, $controller) {
-		$httpBackend = _$httpBackend_; // to avoid name conflict
-		$httpBackend.expectGET('bikes/allbikes.json')
-			.respond([{name: 'myBike'}]);
+    it('should return data relating to the specific bike', function() {
+      expect(scope.bike).toBeUndefined;
 
-		scope = $rootScope.$new();
-		ctrl = $controller('BikesOverviewCtrl', {$scope: scope});
-	}));
+      $httpBackend.flush();
 
-  	it("should make the bikes model with just 1 bike fetched via $http", function() {
-		expect(scope.bikes).toBeUndefined();
+      expect(scope.bike).toEqual({name: 'best bike'});
+    });
+  });
 
-		$httpBackend.flush();
+  describe('BikesOverviewCtrl', function() {
+  	var scope, ctrl, $httpBackend;
 
-		expect(scope.bikes).toEqual([{name: 'myBike'}]);
-  	});
+  	beforeEach(inject(function(_$httpBackend_, $rootScope, $controller) {
+  		$httpBackend = _$httpBackend_; // to avoid name conflict
+  		$httpBackend.expectGET('bikes/allbikes.json').respond([{name: 'myBike'}]);
 
-  	it("should set the default filter to be by Name", function() {
-		expect(scope.order).toBe('name');
-  	});
+  		scope = $rootScope.$new();
+  		ctrl = $controller('BikesOverviewCtrl', {$scope: scope});
+  	}));
+
+    	it("should make the bikes model with just 1 bike fetched via $http", function() {
+  		expect(scope.bikes).toBeUndefined();
+
+  		$httpBackend.flush();
+
+  		expect(scope.bikes).toEqual([{name: 'myBike'}]);
+    	});
+
+    	it("should set the default filter to be by Name", function() {
+  		expect(scope.order).toBe('name');
+    	});
+  });
 });

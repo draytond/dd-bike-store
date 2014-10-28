@@ -12,98 +12,31 @@
 
 <ul class="specs">
   <li>
-    <span>Availability and Networks</span>
+    <span>Where to Buy</span>
     <dl>
-      <dt>Availability</dt>
       <dd ng-repeat="availability in bike.availability">{{availability}}</dd>
     </dl>
   </li>
   <li>
-    <span>Battery</span>
+    <span>Dimensions</span>
     <dl>
-      <dt>Type</dt>
-      <dd>{{bike.battery.type}}</dd>
-      <dt>Talk Time</dt>
-      <dd>{{bike.battery.talkTime}}</dd>
-      <dt>Standby time (max)</dt>
-      <dd>{{bike.battery.standbyTime}}</dd>
+      <dt>Height</dt>
+      <dd>{{bike.sizeAndWeight.dimensions[1]}}</dd>
+      <dt>Length</dt>
+      <dd>{{bike.sizeAndWeight.dimensions[2]}}</dd>
+      <dt>Width of handlebars</dt>
+      <dd>{{bike.sizeAndWeight.dimensions[0]}}</dd>
     </dl>
   </li>
   <li>
-    <span>Storage and Memory</span>
+    <span>Frame</span>
     <dl>
-      <dt>RAM</dt>
-      <dd>{{bike.storage.ram}}</dd>
-      <dt>Internal Storage</dt>
-      <dd>{{bike.storage.flash}}</dd>
-    </dl>
-  </li>
-  <li>
-    <span>Connectivity</span>
-    <dl>
-      <dt>Network Support</dt>
-      <dd>{{bike.connectivity.cell}}</dd>
-      <dt>WiFi</dt>
-      <dd>{{bike.connectivity.wifi}}</dd>
-      <dt>Bluetooth</dt>
-      <dd>{{bike.connectivity.bluetooth}}</dd>
-      <dt>Infrared</dt>
-      <dd>{{bike.connectivity.infrared}}</dd>
-      <dt>GPS</dt>
-      <dd>{{bike.connectivity.gps}}</dd>
-    </dl>
-  </li>
-  <li>
-    <span>Android</span>
-    <dl>
-      <dt>OS Version</dt>
-      <dd>{{bike.android.os}}</dd>
-      <dt>UI</dt>
-      <dd>{{bike.android.ui}}</dd>
-    </dl>
-  </li>
-  <li>
-    <span>Size and Weight</span>
-    <dl>
-      <dt>Dimensions</dt>
-      <dd ng-repeat="dim in bike.sizeAndWeight.dimensions">{{dim}}</dd>
+      <dt>Material</dt>
+      <dd>{{bike.frame.material}}</dd>
       <dt>Weight</dt>
-      <dd>{{bike.sizeAndWeight.weight}}</dd>
-    </dl>
-  </li>
-  <li>
-    <span>Display</span>
-    <dl>
-      <dt>Screen size</dt>
-      <dd>{{bike.display.screenSize}}</dd>
-      <dt>Screen resolution</dt>
-      <dd>{{bike.display.screenResolution}}</dd>
-      <dt>Touch screen</dt>
-      <dd>{{bike.display.touchScreen}}</dd>
-    </dl>
-  </li>
-  <li>
-    <span>Hardware</span>
-    <dl>
-      <dt>CPU</dt>
-      <dd>{{bike.hardware.cpu}}</dd>
-      <dt>USB</dt>
-      <dd>{{bike.hardware.usb}}</dd>
-      <dt>Audio / headbike jack</dt>
-      <dd>{{bike.hardware.audioJack}}</dd>
-      <dt>FM Radio</dt>
-      <dd>{{bike.hardware.fmRadio}}</dd>
-      <dt>Accelerometer</dt>
-      <dd>{{bike.hardware.accelerometer}}</dd>
-    </dl>
-  </li>
-  <li>
-    <span>Camera</span>
-    <dl>
-      <dt>Primary</dt>
-      <dd>{{bike.camera.primary}}</dd>
-      <dt>Features</dt>
-      <dd>{{bike.camera.features.join(', ')}}</dd>
+      <dd>{{bike.frame.weight}}</dd>
+      <dt>Type</dt>
+      <dd>{{bike.frame.type}}</dd>
     </dl>
   </li>
   <li>

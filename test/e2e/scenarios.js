@@ -43,10 +43,10 @@ describe('bikeStoreApp', function() {
 				});
 			}
 
-			expect(bikeNames()).toEqual([ 
+			expect(bikeNames()).toEqual([
 				'Captain America Kick Butt Bike',
 				'Freestyle Stunt Bike',
-				'The Machine' 
+				'The Machine'
 			]);
 
 			orderByHeight.click();
@@ -54,7 +54,7 @@ describe('bikeStoreApp', function() {
 			expect(bikeNames()).toEqual([
 				'Captain America Kick Butt Bike',
 				'The Machine',
-				'Freestyle Stunt Bike' 
+				'Freestyle Stunt Bike'
 			]);
 		});
 
@@ -72,9 +72,9 @@ describe('bikeStoreApp', function() {
 				browser.get('app/index.html#/details/machine');
 			});
 
-			it('should display placeholder page with the id of the bike', function() {
-				expect(element(by.binding('currentId')).getText()).toBe('machine');
-			});
+			it('should display The Machine page', function() {
+   			expect(element(by.binding('bike.name')).getText()).toBe('The Machine');
+  		});
 		});
 	});
 });
