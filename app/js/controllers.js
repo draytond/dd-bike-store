@@ -16,6 +16,10 @@ bikeStoreControllers.controller("bikeDetailCtrl", ["$scope", "$routeParams", "$h
 	function($scope, $routeParams, $http) {
     $http.get('bikes/' + $routeParams.id + '.json').success(function(data) {
       $scope.bike = data;
+      $scope.currentBikePic = $scope.bike.images[0];
     });
 		$scope.currentId = $routeParams.id;
+    $scope.bigPic = function(img) {
+      $scope.currentBikePic = img;
+    }
 }]);

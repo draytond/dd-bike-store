@@ -9,7 +9,7 @@ describe('Bike Store controllers', function() {
     var scope, ctrl, $httpBackend;
     beforeEach(inject(function(_$httpBackend_, $rootScope, $routeParams, $controller){
       $httpBackend = _$httpBackend_;
-      $httpBackend.expectGET('bikes/zzz.json').respond({name: 'best bike'});
+      $httpBackend.expectGET('bikes/zzz.json').respond({name: 'best bike', images: 'path.jpg'});
       $routeParams.id = 'zzz';
       scope = $rootScope.$new();
       ctrl = $controller('bikeDetailCtrl', {$scope: scope});
@@ -20,7 +20,7 @@ describe('Bike Store controllers', function() {
 
       $httpBackend.flush();
 
-      expect(scope.bike).toEqual({name: 'best bike'});
+      expect(scope.bike).toEqual({name: 'best bike', images: 'path.jpg'});
     });
   });
 
@@ -29,7 +29,7 @@ describe('Bike Store controllers', function() {
 
   	beforeEach(inject(function(_$httpBackend_, $rootScope, $controller) {
   		$httpBackend = _$httpBackend_; // to avoid name conflict
-  		$httpBackend.expectGET('bikes/allbikes.json').respond([{name: 'myBike'}]);
+  		$httpBackend.expectGET('bikes/allbikes.json').respond([{name: 'myBike', images: 'path.jpg'}]);
 
   		scope = $rootScope.$new();
   		ctrl = $controller('BikesOverviewCtrl', {$scope: scope});
@@ -40,7 +40,7 @@ describe('Bike Store controllers', function() {
 
   		$httpBackend.flush();
 
-  		expect(scope.bikes).toEqual([{name: 'myBike'}]);
+  		expect(scope.bikes).toEqual([{name: 'myBike', images: 'path.jpg'}]);
     	});
 
     	it("should set the default filter to be by Name", function() {

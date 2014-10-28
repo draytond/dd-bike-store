@@ -75,6 +75,11 @@ describe('bikeStoreApp', function() {
 			it('should display The Machine page', function() {
    			expect(element(by.binding('bike.name')).getText()).toBe('The Machine');
   		});
+
+  		it('should set main image to be the thumbnail that was clicked', function() {
+  			element.all(by.css('.bike-thumbs img')).first().click();
+  			expect(element.all(by.css('img')).first().getAttribute('src')).toMatch(/img\/bikes\/machine-1.jpg/);
+  		});
 		});
 	});
 });

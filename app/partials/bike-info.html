@@ -1,4 +1,4 @@
-<img ng-src="{{bike.images[0]}}" class="bike">
+<img ng-src="{{currentBikePic}}" class="bike">
 
 <h1>{{bike.name}}</h1>
 
@@ -6,7 +6,7 @@
 
 <ul class="bike-thumbs">
   <li ng-repeat="img in bike.images">
-    <img ng-src="{{img}}">
+    <img ng-src="{{img}}" ng-click="bigPic(img)">
   </li>
 </ul>
 
