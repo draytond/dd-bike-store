@@ -1,9 +1,8 @@
 {
-  "name": "angular-phonecat",
+  "name": "dd-bike-store",
   "description": "A starter project for AngularJS",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-phonecat",
-  "license": "MIT",
+  "homepage": "https://github.com/draytond/dd-bike-store.git",
   "private": true,
   "dependencies": {
     "angular": "1.2.x",
