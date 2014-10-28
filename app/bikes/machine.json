@@ -1,27 +1,28 @@
 {
-    "additionalFeatures": "Optional wheel pegs", 
+    "additionalFeatures": "Optional wheel pegs",
     "availability": [
         "Everywhere"
-    ], 
-    "description": "Ground round ipsum eu pastrami incididunt commodo minim. Deserunt ea exercitation sirloin corned beef ullamco, consectetur hamburger. Ribeye bacon ea magna, fatback do brisket. Consectetur ham shoulder tail bacon est et culpa tempor labore incididunt. Voluptate chicken spare ribs, filet mignon pork ut short loin sausage venison cow. Strip steak filet mignon occaecat nisi flank ribeye ball tip eu, excepteur ullamco beef ribs.", 
+    ],
+    "description": "Ground round ipsum eu pastrami incididunt commodo minim. Deserunt ea exercitation sirloin corned beef ullamco, consectetur hamburger. Ribeye bacon ea magna, fatback do brisket. Consectetur ham shoulder tail bacon est et culpa tempor labore incididunt. Voluptate chicken spare ribs, filet mignon pork ut short loin sausage venison cow. Strip steak filet mignon occaecat nisi flank ribeye ball tip eu, excepteur ullamco beef ribs.",
     "frame": {
-        "type": "A-Frame", 
-        "material": "steel", 
+        "type": "A-Frame",
+        "material": "steel",
         "weight": "7lb"
-    }, 
-    "id": "machine", 
+    },
+    "id": "machine",
     "images": [
         "img/bikes/machine-1.jpg",
         "img/bikes/machine-2.jpg",
         "img/bikes/machine-3.jpg"
-    ], 
-    "name": "The Machine", 
+    ],
+    "name": "The Machine",
     "sizeAndWeight": {
         "dimensions": [
-            "14 inches (w)", 
-            "17 inches (h)", 
+            "14 inches (w)",
+            "17 inches (h)",
             "41 inches (d)"
-        ], 
+        ],
         "weight": "11lb"
-    }
+    },
+    "awesome": false
 }

@@ -1,27 +1,28 @@
 {
-    "additionalFeatures": "Optional wheel pegs", 
+    "additionalFeatures": "Optional wheel pegs",
     "availability": [
         "Everywhere"
-    ], 
-    "description": "Hamburger flank shankle, dolor fatback labore in ribeye velit ullamco. Salami ground round id tri-tip ex adipisicing. Ham andouille kevin, irure frankfurter pastrami eiusmod. Nisi bacon velit, veniam drumstick reprehenderit officia pork chop commodo meatball.", 
+    ],
+    "description": "Hamburger flank shankle, dolor fatback labore in ribeye velit ullamco. Salami ground round id tri-tip ex adipisicing. Ham andouille kevin, irure frankfurter pastrami eiusmod. Nisi bacon velit, veniam drumstick reprehenderit officia pork chop commodo meatball.",
     "frame": {
-        "type": "A-Frame", 
-        "material": "steel", 
+        "type": "A-Frame",
+        "material": "steel",
         "weight": "7lb"
-    }, 
-    "id": "moto", 
+    },
+    "id": "moto",
     "images": [
         "img/bikes/moto-1.jpg",
         "img/bikes/moto-2.jpg",
         "img/bikes/moto-3.jpg"
-    ], 
-    "name": "Blue Moto 3000", 
+    ],
+    "name": "Blue Moto 3000",
     "sizeAndWeight": {
         "dimensions": [
-            "12 inches (w)", 
-            "19 inches (h)", 
+            "12 inches (w)",
+            "19 inches (h)",
             "40 inches (d)"
-        ], 
+        ],
         "weight": "9lb"
-    }
+    },
+    "awesome": true
 }

@@ -24,5 +24,6 @@
             "40 inches (d)"
         ],
         "weight":"6lb"
-    }
+    },
+    "awesome": false
 }
