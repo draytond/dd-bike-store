@@ -9,3 +9,10 @@ bikeStoreServices.factory('Bike', ['$resource',
       query: {method: 'GET', params: {id: 'allbikes'}, isArray: true}
     });
 }]);
+
+// bikeStoreServices.factory('Bikes', ['$resource',
+//   function($resource) {
+//     return $resource('details/:id.json', {}, {
+//       query: {method: 'GET', params: {id: 'allbikes'}, isArray: true}
+//     });
+// }]);

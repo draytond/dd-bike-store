@@ -22,8 +22,8 @@ describe('Bike Store controllers', function() {
       ctrl = $controller('bikeDetailCtrl', {$scope: scope});
     }));
 
-    xit('should return data relating to the specific bike', function() {
-      expect(scope.bike).toEqualData([]);
+    it('should return data relating to the specific bike', function() {
+      expect(scope.bike).toBeUndefined;
 
       $httpBackend.flush();
 
@@ -42,15 +42,15 @@ describe('Bike Store controllers', function() {
   		ctrl = $controller('BikesOverviewCtrl', {$scope: scope});
   	}));
 
-  	xit("should make the bikes model with just 1 bike fetched via $http", function() {
-  		expect(scope.bikes).toEqualData({});
+  	it("should make the bikes model with just 1 bike fetched via $http", function() {
+  		expect(scope.bikes).toEqualData([]);
 
   		$httpBackend.flush();
 
   		expect(scope.bikes).toEqualData([{name: 'myBike', images: 'path.jpg'}]);
   	});
 
-  	xit("should set the default filter to be by Name", function() {
+  	it("should set the default filter to be by Name", function() {
 		  expect(scope.order).toBe('name');
   	});
   });

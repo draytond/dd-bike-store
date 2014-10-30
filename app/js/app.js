@@ -1,8 +1,8 @@
 'use strict';
 
 /* App Module */
-var bikeStoreApp = angular.module('bikeStoreApp', ['bikeStoreControllers',
-	'ngRoute', 'bikeStoreFilters', 'bikeStoreServices']);
+var bikeStoreApp = angular.module('bikeStoreApp', ['ngRoute', 'bikeStoreControllers',
+	'bikeStoreFilters', 'bikeStoreServices']);
 
 bikeStoreApp.config(['$routeProvider',
 	function($routeProvider) {

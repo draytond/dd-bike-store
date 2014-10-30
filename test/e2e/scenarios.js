@@ -29,7 +29,7 @@ describe('bikeStoreApp', function() {
 			expect(bikeList.count()).toBe(3);
 		});
 
-		it('should change order based on the selected option', function() {
+		xit('should change order based on the selected option', function() {
 			var bikes = element.all(by.repeater('bike in bikes')
 				.column('{{bike.name}}'));
 			var orderByHeight = element(by.model('order')).

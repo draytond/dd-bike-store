@@ -6,7 +6,7 @@ describe('service', function() {
   beforeEach(module('bikeStoreApp'));
 
   // Test service availability
-  xit('check the existence of bike factory', inject(function(Bike) {
+  it('check the existence of bike factory', inject(function(Bike) {
       expect(Bike).toBeDefined();
   }));
 });
