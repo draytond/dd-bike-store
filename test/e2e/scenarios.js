@@ -78,7 +78,7 @@ describe('bikeStoreApp', function() {
 
   		it('should set main image to be the thumbnail that was clicked', function() {
   			element.all(by.css('.bike-thumbs img')).first().click();
-  			expect(element.all(by.css('img')).first().getAttribute('src')).toMatch(/img\/bikes\/machine-1.jpg/);
+  			expect(element.all(by.css('img.active')).first().getAttribute('src')).toMatch(/img\/bikes\/machine-1.jpg/);
   		});
 		});
 	});
